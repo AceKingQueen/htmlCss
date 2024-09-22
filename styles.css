@@ -1,0 +1,129 @@
+/* 
+To ease development, you can use the following row/column guidelines
+
+1. up to 500px → 7 rows, 1 column
+  1. top and bottom rows are 60px; other rows are 1fr 
+    1. Note the order of the rows are different
+
+New order: Header, Menu, hero, main, footer, extra, image
+2. up to 700px → 5 rows, 4 columns
+  1. rows are either 60px, 100px, or 1fr 
+  2. columns are 1fr 
+3. greater than 700px → 4 rows, 4 columns
+  1. rows are either 50px or 1fr 
+  2. columns are all 1fr  */
+
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    background-color: white;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+  }
+  
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container {
+    height: 100%;
+    font-size: 40px;
+    display: grid;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-rows: 50px repeat(2, 1fr) 50px;
+    grid-template-areas:
+      "header menu menu menu"
+      "hero hero hero hero"
+      "main main image extra"
+      "footer footer footer footer";
+  }
+  
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header {
+    background-color: #0f1629;
+    color: white;
+    grid-area: header;
+  }
+  
+  .menu {
+    background-color: #ef3c4f;
+    color: white;
+    grid-area: menu;
+  }
+  
+  .hero {
+    background-color: #4c86c6;
+    color: white;
+    grid-area: hero;
+  }
+  
+  .main {
+    background-color: #24344b;
+    color: white;
+    grid-area: main;
+  }
+  
+  .image {
+    background-color: #c2e4e6;
+    grid-area: image;
+  }
+  
+  .extra {
+    background-color: #4dbd97;
+    grid-area: extra;
+  }
+  
+  .footer {
+    background-color: #fed269;
+    grid-area: footer;
+  }
+  /* New order: Header, Menu, hero, main, footer, extra, image */
+  @media (width <= 500px) {
+    .container {
+      /* grid-template-rows: */
+      grid-template-areas:
+        "header"
+        "menu"
+        "hero"
+        "main"
+        "footer"
+        "extra"
+        "image";
+      /* top and bottom rows are 60px; other rows are 1fr */
+      grid-template-rows: 60px repeat(5, 1fr) 60px;
+    }
+  }
+  
+  @media (min-width: 501px) and (max-width: 700px) {
+    .container {
+      grid-template-areas:
+        "header header header header"
+        "hero hero hero hero"
+        "menu main main main"
+        "menu footer footer footer"
+        "menu extra extra image";
+    }
+  }
+  @media (min-width: 701px) {
+    .container {
+      border: 2px solid blue;
+    }
+  }
+  
