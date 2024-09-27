@@ -123,7 +123,12 @@ New order: Header, Menu, hero, main, footer, extra, image
   }
   @media (min-width: 701px) {
     .container {
-      border: 2px solid blue;
+      grid-template-areas :
+      "header header header header"
+      "menu hero hero hero"
+      "menu main image extra"
+      "footer footer footer footer"
+      
     }
   }
   
