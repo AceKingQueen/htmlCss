@@ -1,0 +1,40 @@
+.container {
+    border: 2px solid black;
+    display: grid;
+    grid-template-areas: 
+    "move posted";
+    grid-template-columns: 1fr 8fr;
+    width: 600px;
+    height: 600px;
+}
+
+.move {
+    grid-area: move;
+    border: 2px solid red;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.content {
+    margin-bottom: 15px;
+}
+
+.posted {
+    grid-area: posted;
+    border: 2px solid blue;
+    padding: 1em;
+}
+
+.images {
+    height: 200px;
+    border: 2px solid #ccc;
+    margin-left: 50px;
+
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+  
