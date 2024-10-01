@@ -1,18 +1,17 @@
 .container {
     border: 2px solid black;
     display: grid;
-    grid-template-areas: 
-    "move posted";
     grid-template-columns: 1fr 8fr;
     width: 600px;
     height: 600px;
 }
 
 .move {
-    grid-area: move;
     border: 2px solid red;
-    margin: 0 auto;
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
 }
 
 .content {
@@ -20,7 +19,6 @@
 }
 
 .posted {
-    grid-area: posted;
     border: 2px solid blue;
     padding: 1em;
 }
