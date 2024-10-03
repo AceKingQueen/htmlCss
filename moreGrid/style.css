@@ -1,0 +1,20 @@
+.moreGrid {
+    display: grid;
+}
+
+  .otherHeader {
+    grid-area: otherHeader;
+    height: 64px;
+    background-color: lightblue;
+  }
+  .left {
+    grid-area: left;
+  }
+  .right {
+    grid-area: right;
+  }
+  .otherFooter {
+    grid-area: otherFooter;
+    height: 64px;
+    background-color: lightcoral;
+  }
