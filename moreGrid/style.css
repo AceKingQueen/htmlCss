@@ -1,5 +1,9 @@
 .moreGrid {
     display: grid;
+    grid-template-areas :
+    "otherHeader otherHeader"
+    "left right"
+    "otherFooter otherFooter"
 }
 
   .otherHeader {
@@ -7,14 +11,21 @@
     height: 64px;
     background-color: lightblue;
   }
+ 
   .left {
     grid-area: left;
+    background-color: pink;
+    height: 150px;
   }
+
   .right {
     grid-area: right;
+    height: 150px;
+    background-color: yellowgreen;
+
   }
   .otherFooter {
     grid-area: otherFooter;
     height: 64px;
     background-color: lightcoral;
-  }
+  } 
