@@ -29,3 +29,37 @@
     height: 64px;
     background-color: lightcoral;
   } 
+
+  .flexbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+
+    .flexHeader {
+        height: 64px;
+        background-color: palegoldenrod;
+    }
+
+    .bodyContainer {
+        display: flex;
+        flex-direction: row;
+
+        .flexLeft, .flexRight {
+            width: 50%;
+            height: 150px;
+        }
+
+        .flexLeft {
+            background-color: peachpuff;
+        }
+
+        .flexRight {
+            background-color: palevioletred;
+        }
+    }
+
+    .flexFooter {
+        height: 64px;
+        background-color: paleturquoise;
+    }
+  }
