@@ -1,3 +1,20 @@
-.hello-world {
-    color: red
+body {
+  text-align: center;
+}
+
+.top {
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+
+  .inputs input {
+    margin-top: 0.5em;
+  }
+}
+
+.bottom {
+  margin-top: 1em;
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
 }

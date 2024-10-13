@@ -4,35 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
+    <title>Survey Form</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <form action="" method="get" class="form-example">
-      <h1 class="hello-world">Employee Interests Survey form</h1>
+      <h1>Employee Interests Survey form</h1>
+      <div class="top">
+        <div class="inputs">
+          <label>Enter your name: </label>
+          <div><input type="text" name="name" id="name" /></div>
+          
+          <label>Enter your department: </label>
+          <div><input type="text" name="department" id="department" /></div>
+          
+        </div>
+        <div class="inputs">
+          <label>Enter your email: </label>
+          <div><input type="email" name="email" id="email" /></div>
+         
+          <label>Enter your password: </label>
+          <div><input type="text" name="password" id="password" /></div>
+          
+        </div>
+        <div>
+          <label for="password">Tell us a little about yourself: </label>
+          <textarea id="self" name="self" rows="5" cols="33"> </textarea>
+        </div>
+    </div>
+      <div class="bottom">
       <div class="form-example">
-        <label for="name">Enter your name: </label>
-        <input type="text" name="name" id="name" />
+        <label for="exercise">Do you exercise at home?</label>
+        <input type="radio" name="exercise" value="yes">Yes</input>
+        <input type="radio" name="exercise" value="no">No</input>
       </div>
+
       <div class="form-example">
-        <label for="email">Enter your email: </label>
-        <input type="email" name="email" id="email" />
+        <label>How do you like to read about your favorite topics?</label>
+        <div>
+          <input type="checkbox" id="books" name="books" />
+          <label for="books">Books</label> 
+          <input type="checkbox" id="onlineResources" name="onlineResources" />
+          <label for="onlineResources">Online Resources</label> 
+          <input type="checkbox" name="phoneApps">
+          <label for="phoneApps">Phone Apps</label>
+          <input type="checkbox" name="magazines">
+          <label for="magazines">Magazines</label>
+        </div>
       </div>
+    
       <div class="form-example">
-        <label for="department">Enter your department: </label>
-        <input type="text" name="department" id="department" />
+        <label>What genre of movies do you like?</label>
+        <div>
+          <select name="movies" >
+            <option value="comedy">Comedy</option>
+            <option value="action">Action</option>
+            <option value="romantic">Romantic</option>
+            <option value="historical">Historical</option>
+          </select>
+        </div>
       </div>
-      <div class="form-example">
-        <label for="password">Enter your password: </label>
-        <input type="text" name="password" id="password" />
-      </div>
-      <div class="form-example">
-        <label for="password">Tell us a little about yourself: </label>
-        <textarea id="self" name="self" rows="5" cols="33"> </textarea>
-      </div>
+  
       <div class="form-example">
         <input type="submit" value="Submit" />
       </div>
+    </div>
     </form>
   </body>
 </html>
